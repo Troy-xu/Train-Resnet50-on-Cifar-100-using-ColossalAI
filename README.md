@@ -1,6 +1,6 @@
 # Train-Resnet50-on-Cifar-100-using-ColossalAI
 
-This assignment is only for educational experiment purpose on familiarize with ColossalAI.
+This assignment is only for educational experiment purpose on familiarize with ColossalAI. Hence it is not trained with enough epochs and the accuracy for val accuracy is not good.
 
 Colossal-AI is an integrated large-scale deep learning system with efficient parallelization techniques. The system can accelerate model training on distributed systems with multiple GPUs by applying parallelization techniques. The system can also run on systems with only one GPU. In this assignment I am using colab which only has single GPU.
 
@@ -35,7 +35,7 @@ It will pop up a window to ask you to restart to use the runtime
 ```
 cd "/content/drive/MyDrive/Colab Notebooks/NUS MCOMP Sem2/CS5260/asg6/Resnet50_Cifar100"
 ```
-* Make sure current directory is correct
+* Make sure current directory is correct and eval.py, train.py, requirements.txt are in the same folder as Resnet50_Cifar100.ipynb
 ```
 pwd
 ```
@@ -64,6 +64,7 @@ The folders will be created automatically. (--nproc_per_node n, where n is the n
 !python eval.py -c ./ckpt-low_level_zero -e 80
 ```
 ### Colab logs
+For experiment purpose of testing, I only train with torch DDP with mixed precision training and evaluate.
 You can see the notebook logs directly from:
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Troy-xu/Train-Resnet50-on-Cifar-100-using-ColossalAI/blob/main/Resnet50_Cifar100.ipynb)
 
